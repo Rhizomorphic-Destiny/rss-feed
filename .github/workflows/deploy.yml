@@ -4,6 +4,8 @@ on:
     branches: [main]
   schedule:
     - cron: '0 * * * *' # Runs hourly
+permissions:
+  contents: write # Grants write access to repository contents
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
