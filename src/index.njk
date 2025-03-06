@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RSS Feed Aggregator</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+    .post { margin-bottom: 20px; }
+    .post a { color: #1a0dab; text-decoration: none; }
+    .post a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>RSS Feed Aggregator</h1>
+  {% for item in rss %}
+    <div class="post">
+      <h2><a href="{{ item.link }}">{{ item.title }}</a></h2>
+      <p>{{ item.contentSnippet | truncate(200) }}</p>
+      <small>{{ item.pubDate }}</small>
+    </div>
+  {% endfor %}
+</body>
+</html>
