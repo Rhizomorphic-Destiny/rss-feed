@@ -1,0 +1,13 @@
+{
+  "name": "rss-feed",
+  "version": "1.0.0",
+  "description": "RSS Feed Aggregator on GitHub Pages",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "rss-parser": "^3.13.0"
+  }
+}
